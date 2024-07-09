@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import datasets, layers, models, losses, utils
+from tensorflow.keras import datasets, layers, models
 
 # load & check MNIST dataset (should have 6000 train, 1000 test)
 (x_train, y_train), (x_test, y_test) = datasets.mnist.load_data()
@@ -21,6 +21,7 @@ model = models.Sequential([
     layers.Conv2D(64, (3, 3), activation='relu'),
     layers.MaxPooling2D((2,2)),
     layers.Conv2D(64, (3, 3), activation='relu'),
+    layers.Dropout(0.5),
     # basic neural network
     layers.Flatten(),
     layers.Dense(64, activation='relu'),
@@ -29,15 +30,15 @@ model = models.Sequential([
 # compile model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 # train model
-history = model.fit(x_train, y_train, epochs=3, validation_split=0.2)
+history = model.fit(x_train, y_train, epochs=8, validation_split=0.2)
 model.summary()
 
 # evaluate model on test data
-test_loss, test_acc = model.evaluate(x_test, utils.to_categorical(y_test, num_classes=10))
+test_loss, test_acc = model.evaluate(x_test, y_test)
 
 print(test_acc)
 y_predict = model.predict(x_test)
 print(y_predict.shape)
 
 # Save model
-model.save("model.h5")
+model.save("model.keras")
