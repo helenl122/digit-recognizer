@@ -3,23 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handwritten Digit Recognizer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Digit Recognizer</title>
+    <!--Linked styles & scripts-->
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-autocolors"></script>
 </head>
 <body onload="init()">
-    <ul>
-        <li><a href="https://github.com/helenl122/digit-recognizer">Source Code</a></li>
-    </ul>
-    <h1>Handwritten Digit Recognizer</h1>
-    <h2>Trained on the MNIST dataset</h2>
-    <h3>Try drawing & see if the CNN can correctly classify the digit!</h3>
-    <!--MNIST dataset = 28x28-->
-    <div id="sketchpadapp">
+    <span id="sketchpadApp">
         <canvas id="sketchpad" width="280" height="280" style="background-color: black;"></canvas>
-        </br><input type="submit" value="Clear" onclick="clearCanvas(canvas, ctx);">
-    </div>
-    <canvas id="barChart" width="400" height="400"></canvas>
+        </br><input type="submit" value="Clear" onclick="clearCanvas();">
+        <input type="submit" value="Predict" onclick="predict();">
+        <p id="predictionText">?</p>
+    </span>
+    <span id="barChartApp">
+        <canvas id="barChart"></canvas>
+    </span>
 </body>
 </html>
