@@ -6,25 +6,37 @@
     <title>Digit Recognizer</title>
     <!--Linked styles & scripts-->
     <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
-    <link rel="stylesheet" href="../static/styles.css">
     <script src="../static/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-autocolors"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous"
-    ></script>
+    >
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body onload="init()">
-    <span id="sketchpadApp">
-        <canvas id="sketchpad" width="280" height="280" style="background-color: black;"></canvas>
-        </br><input type="submit" value="Clear" onclick="clearCanvas();">
-        <input type="submit" value="Predict" onclick="predict();">
-        <p id="predictionText">?</p>
-    </span>
-    <span id="barChartApp">
-        <canvas id="barChart"></canvas>
-    </span>
+    <div class="container-fluid border">
+        <!-- <div class="row mx-5 align-items-center justify-content-center"> -->
+        <div class="row">
+            <div class="card">
+                <div class="col-md-6" id="sketchpadApp">
+                    <canvas id="sketchpad" width="280" height="280" style="background-color: black;"></canvas>
+                    <div class="card body">
+                        <button class="btn btn-outline-secondary" onclick="clearCanvas();">Clear</button>
+                        <button class="btn btn-outline-primary" onclick="predict();">Predict</button>
+                        <p class="card-text" id="predictionText">?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="barChartApp">
+                <div class="card bg-dark mb-25">
+                    <canvas id="barChart" width="200" height="100"></canvas>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
