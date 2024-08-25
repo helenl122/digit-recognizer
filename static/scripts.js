@@ -100,4 +100,7 @@ function predict() {
         barChart.data.datasets[0].data = predictions.map(confidence => confidence*100);
         barChart.update();
     })
+    .catch(error => {
+        console.log(error);
+    })
 }
