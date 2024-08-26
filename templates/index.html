@@ -17,24 +17,48 @@
     <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body onload="init()">
-    <div class="container-fluid border">
-        <!-- <div class="row mx-5 align-items-center justify-content-center"> -->
-        <div class="row">
-            <div class="card">
-                <div class="col-md-6" id="sketchpadApp">
-                    <canvas id="sketchpad" width="280" height="280" style="background-color: black;"></canvas>
-                    <div class="card body">
-                        <button class="btn btn-outline-secondary" onclick="clearCanvas();">Clear</button>
-                        <button class="btn btn-outline-primary" onclick="predict();">Predict</button>
-                        <p class="card-text" id="predictionText">?</p>
+    <!-- Navbar w/ link to github repo -->   
+    <nav class="navbar navbar-expand-lg" style="background-color: #72aceb">
+        <div class="container-fluid">
+            <p class="navbar-brand h1" style="color:white">Handwritten Digit Recognizer</p>
+            <a class="navbar-brand" href="https://github.com/helenl122/digit-recognizer">
+                <img src="../static/github.png" alt="GitHub" width="45" height="45">
+            </a>
+        </div>  
+    </nav>
+
+    <!-- Container with sketchpad and barchart -->
+    <div class="container">
+        <div class="row py-5">
+            <!-- left section (sketchpad w/ text & buttons) -->
+            <div class="col-lg-6" id="sketchpadApp">
+                <div class="row align-items-center" id="sketchpadText">
+                    <div class="col-md-8 py-3" id="sketchPadButtons">
+                        <canvas class="image-fluid" id="sketchpad" width="280rem" height="280rem" style="background-color: black;"></canvas>
+                        </br>
+                        <div class="col-md-auto px-5" id="buttons">
+                            <button class="btn btn-outline-secondary ml-3" onclick="clearCanvas();">Clear</button>
+                            <button class="btn btn-outline-primary mr-3" onclick="predict();">Predict</button>
+                        </div>
                     </div>
-                </div>
+                    <div class="col-md-4 py-3 align-items-center" id="textDescription">
+                        <p class="h5">Prediction:</p>
+                        <div class="border" id="guess" style="width:3rem; height:3rem">
+                            <h1 class="p" id="predictionText"></h1>
+                        </div>
+                        </br>
+                        <p>The recognizer uses a Convolutional Neural Network
+                            (<a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">CNN</a>)
+                            trained on
+                            <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST</a>
+                            data, a large image database of handwritten digits. Try writing and see if the correct digit can be classified!
+                        </p>
+                    </div>
+                </div>        
             </div>
-            <div class="col-md-6" id="barChartApp">
-                <div class="card mb-25">
-                    <canvas id="barChart" width="200" height="100"></canvas>
-                </div>
-            </div>
+            <!-- right section (bar chart of probabilities) -->
+            <div class="col-lg-6" id="barChartApp">
+                <canvas class="p-3" id="barChart" width="200" height="100"></canvas>
             </div>
         </div>
     </div>

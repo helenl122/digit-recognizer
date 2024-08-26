@@ -26,9 +26,18 @@ function init() {
             borderWidth: 1
         }]
     };
+    var chartOptions = {
+        scales: {
+            y: {
+                min: 0,
+                max: 100
+            }
+        }
+    }
     barChart = new Chart(docChart, {
         type: "bar",
-        data: chartData
+        data: chartData,
+        options: chartOptions
     });
 }
 
@@ -74,10 +83,14 @@ function getPos(e) {
         X = e.offsetX;
         Y = e.offsetY;
     } else if (e.touches) {
-        if (e.touches.length == 1) {
+        if (e.touches.length == 1) { // only 1 touch point
             let touch = e.touches[0];
-            X = touch.clientX;
-            Y = touch.clientY;
+            let offsets = canvas.getBoundingClientRect();
+            let top = offsets.top;
+            let left = offsets.left;
+
+            X = touch.clientX - left;
+            Y = touch.clientY - top;
         }
     }
 }
