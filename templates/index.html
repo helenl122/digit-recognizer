@@ -20,18 +20,18 @@
     <!-- Navbar w/ link to github repo -->   
     <nav class="navbar navbar-expand-lg" style="background-color: #72aceb">
         <div class="container-fluid">
-            <p class="navbar-brand h1" style="color:white">Handwritten Digit Recognizer</p>
-            <a class="navbar-brand" href="https://github.com/helenl122/digit-recognizer" target="_blank">
-                <img src="../static/github.png" alt="GitHub" width="45" height="45">
-            </a>
+            <h3 class="navbar-brand" style="color:white">Handwritten Digit Recognizer</h3>
+                <a class="navbar-brand d-none d-sm-flex" href="https://github.com/helenl122/digit-recognizer" target="_blank">
+                    <img src="../static/github.png" alt="GitHub" width="45" height="45">
+                </a>
         </div>  
     </nav>
 
     <!-- Container with sketchpad and barchart -->
     <div class="container">
-        <div class="row py-5">
+        <div class="row">
             <!-- left section (sketchpad w/ text & buttons) -->
-            <div class="col-md-6" id="sketchpadApp">
+            <div class="col-lg-6" id="sketchpadApp">
                 <div class="row align-items-center" id="sketchpadText">
                     <div class="col-md-8 py-3" id="sketchPadButtons">
                         <canvas class="image-fluid" id="sketchpad" width="280rem" height="280rem" style="background-color: black;"></canvas>
@@ -57,7 +57,7 @@
                 </div>        
             </div>
             <!-- right section (bar chart of probabilities) -->
-            <div class="col-md-6" id="barChartApp">
+            <div class="col-lg-6" id="barChartApp">
                 <canvas class="p-3" id="barChart" width="200" height="100"></canvas>
             </div>
         </div>

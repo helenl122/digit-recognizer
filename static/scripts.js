@@ -44,6 +44,7 @@ function init() {
 /** event handlers for drawing **/
 function sketchpad_mouseDown(e) {
     mouseDown=1; // boolean value True
+    disableScroll();
     getPos(e);
     drawLine(context, X, Y);
 }
@@ -53,6 +54,7 @@ function sketchpad_mouseMove(e) {
 }
 function sketchpad_mouseUp() {
     mouseDown = 0; // boolean value False
+    enableScroll();
     lastX = -1;
     lastY = -1;
 }
@@ -93,6 +95,12 @@ function getPos(e) {
             Y = touch.clientY - top;
         }
     }
+}
+function disableScroll() {
+    document.querySelector('body').classList.add('disable-scroll');
+}
+function enableScroll() {
+    document.querySelector('body').classList.remove('disable-scroll');
 }
 
 /** predict the number using CNN **/

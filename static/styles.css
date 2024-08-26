@@ -8,3 +8,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
+
+.disable-scroll {
+  /*disable scrolling page when drawing inside canvas*/
+  overflow-y:hidden;
+  overflow-x:hidden;
+}
