@@ -6,7 +6,6 @@ from PIL import Image
 
 app = Flask(__name__)
 
-# Load the trained model
 model = load_model("model.keras")
 
 # Convert canvas drawing image into array

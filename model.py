@@ -27,8 +27,8 @@ model = models.Sequential([
     layers.Dense(64, activation='relu'),
     layers.Dense(10, activation='softmax')
 ])
-# compile model
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
 # train model
 history = model.fit(x_train, y_train, epochs=8, validation_split=0.2)
 model.summary()

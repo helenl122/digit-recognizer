@@ -32,31 +32,29 @@
     </nav>
 
     <!-- Container with sketchpad and barchart -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row align-items-center">
             <!-- left section (sketchpad w/ text & buttons) -->
             <div class="col-lg-4 py-3 my-3">
-                <!-- sketchpad (&buttons) w/ prediction -->
-                <div class="row">
-                    <!-- prediction title & number box -->
+                <!-- sketchpad, prediction, buttons-->
+                <div class="row mx-2">
                     <div class="col-4">
+                        <!-- prediction & number box -->
                         <h6 class="mx-2">Prediction:</h6>
                         <div class="border mx-4 mt-2 mb-3" style="width:3rem; height:3rem">
                             <h1 id="predictionText"></h1>
                         </div>
-                        <!-- clear & predict buttons -->
+                        <!-- buttons -->
                         <button class="btn btn-outline-secondary btn-block px-3" onclick="clearCanvas();">Clear</button>
                         <button class="btn btn-outline-primary btn-block px-3" onclick="predict();">Predict</button>
                     </div>
                     <div class="col-8">
                         <!-- canvas sketchpad -->
-                        <div>
-                            <canvas class="img-fluid" id="sketchpad" width="180" height="180" style="background-color: black;"></canvas>
-                        </div>
+                        <canvas class="img-fluid" id="sketchpad" width="280" height="280" style="background-color: black;"></canvas>
                     </div>
                 </div>
                 <!-- text description -->
-                <div class="my-2">
+                <div class="my-2 mx-2">
                     <p class="p-2">The recognizer uses a Convolutional Neural Network
                         (<a href="https://en.wikipedia.org/wiki/Convolutional_neural_network" target="_blank">CNN</a>)
                         trained on

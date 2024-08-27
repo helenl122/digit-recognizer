@@ -16,7 +16,7 @@ function init() {
         canvas.addEventListener("touchmove", sketchpad_mouseMove);
         window.addEventListener("touchend", sketchpad_mouseUp);        
     }
-    // initialize chart
+    // initialize chart w/ values and scales
     docChart = document.getElementById("barChart");
     var chartData = {
         labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
@@ -90,7 +90,6 @@ function getPos(e) {
             let offsets = canvas.getBoundingClientRect();
             let top = offsets.top;
             let left = offsets.left;
-
             X = touch.clientX - left;
             Y = touch.clientY - top;
         }
