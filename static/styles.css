@@ -1,4 +1,4 @@
-#sketchpadApp {
+#sketchpad {
   /*disable selecting elements inside/outside canvas on:
   touch devices, Webkit, KHTML, Mozilla, Microsoft browsers*/
   user-select: none;
