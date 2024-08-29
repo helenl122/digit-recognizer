@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0425c5fbed3a3c9f295558416dee93a372f4250b00a675697816afd42ee88f69"
+            "sha256": "2d401be567a363f6913e130a11b8cae66eb772bc6cdf8de9baa2362f62ce3f29"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -18,11 +18,11 @@
     "default": {
         "absl-py": {
             "hashes": [
-                "sha256:526a04eadab8b4ee719ce68f204172ead1027549089702d99b9059f129ff1308",
-                "sha256:7820790efbb316739cde8b4e19357243fc3608a152024288513dd968d7d959ff"
+                "sha256:84e6dcdc69c947d0c13e5457d056bd43cade4c2393dce00d684aedea77ddc2a3",
+                "sha256:ac511215c01ee9ae47b19716599e8ccfa746f2e18de72bdf641b79b22afa27ea"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version >= '3.6'",
             "version": "==1.0.0"
         },
         "asgiref": {
@@ -795,7 +795,7 @@
                 "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
             ],
             "index": "pypi",
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==1.16.0"
         },
         "sqlparse": {
