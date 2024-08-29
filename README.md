@@ -1,8 +1,8 @@
 # Handwritten Digit Recognizer
 
-This app acts as a user interface for a Convolutional Neural Network (CNN) model that is trained on MNIST handwritten digit data. The CNN model training is done using Python Tensorflow and Keras and connected to a HTML/CSS/JavaScript frontend using the Python Flask API. The CSS Bootstrap framework is used for responsive web design, and the final app is deployed on Render.
+This app acts as a user interface for a Convolutional Neural Network (CNN) model that is trained on MNIST handwritten digit data. The CNN model training is done using Python Tensorflow/Keras and connected to a HTML/CSS/JavaScript frontend using the Python Flask API. The CSS Bootstrap framework is used for responsive web design, and the final application is deployed on Render.
 
-Note that it may take a while to start up and classify initially when clicking the provided link. Another option is to download the repository and run locally using Flask.
+Note that it may take a while to load and classify initially when clicking the provided link. Another option is to download the repository and run locally using Flask.
 Check it out here: https://digit-recognizer-7uqt.onrender.com/
 
 ![recognizer demo](https://github.com/user-attachments/assets/7164100b-9f65-43b9-9a1c-1c8a238291d7)
