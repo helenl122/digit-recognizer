@@ -9,5 +9,6 @@ Helpful Resources:
 - JavaScript Fetch API: https://www.youtube.com/watch?v=fGYQJAlLD68
 - CSS Bootstrap framework: https://youtu.be/-qfEOE4vtxE?si=QJ9qsbpS0AZn0MrI
 - Bootstrap Documentation: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+- Chart JS Barchart: https://www.chartjs.org/docs/latest/charts/bar.html
 - Using JavaScript Packages: https://www.youtube.com/watch?v=P3aKRdUyr0s
 - Deploy to Render: https://www.youtube.com/watch?v=IBfj_0Zf2Mo
