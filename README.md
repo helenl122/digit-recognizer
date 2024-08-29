@@ -1,5 +1,9 @@
 # Handwritten Digit Recognizer
 
+This app acts as a user interface for a Convolutional Neural Network (CNN) model that is trained on MNIST handwritten digit data. Note that it may take a while to start up and classify initially, when clicking the provided web app link. Another option is to download the repository and run locally using Flask.
+
+Check it out here: https://digit-recognizer-7uqt.onrender.com/
+
 ![recognizer demo](https://github.com/user-attachments/assets/7164100b-9f65-43b9-9a1c-1c8a238291d7)
 
 Helpful Resources:
