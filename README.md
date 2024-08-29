@@ -13,3 +13,4 @@ Helpful Resources:
 - Using JavaScript Packages: https://www.youtube.com/watch?v=P3aKRdUyr0s
 - Deploy to Render: https://www.youtube.com/watch?v=_COyD1CExKU
 - Set Render Python version: https://docs.render.com/python-version
+- Set Render port number: https://docs.render.com/web-services#port-binding
