@@ -11,4 +11,5 @@ Helpful Resources:
 - Bootstrap Documentation: https://getbootstrap.com/docs/5.3/getting-started/introduction/
 - Chart JS Barchart: https://www.chartjs.org/docs/latest/charts/bar.html
 - Using JavaScript Packages: https://www.youtube.com/watch?v=P3aKRdUyr0s
-- Deploy to Render: https://www.youtube.com/watch?v=IBfj_0Zf2Mo
+- Deploy to Render: https://www.youtube.com/watch?v=_COyD1CExKU
+- Set Render Python version: https://docs.render.com/python-version
