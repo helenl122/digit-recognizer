@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-absl-py = "==2.1.0"
+absl-py = "==1.0.0"
 asgiref = "==3.8.1"
 astunparse = "==1.6.3"
 blinker = "==1.8.2"
